@@ -24,7 +24,7 @@ namespace Business.Concrete
         public IResult Add(Product product)
         {
             _productDal.add(product);
-            return new SuccessResult(message: Messages.ProductAdded );
+            return new SuccessResult(message: Messages.ProductAdded);
         }
 
         public IResult Delete(Product product)
