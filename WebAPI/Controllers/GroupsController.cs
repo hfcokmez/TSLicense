@@ -78,7 +78,7 @@ namespace WebAPI.Controllers
         [HttpPost(template: "update")]
         public IActionResult Update(Group group)
         {
-            var result = _groupService.Add(group);
+            var result = _groupService.Update(group);
             if (result.Success)
             {
                 return Ok(result.Message);
