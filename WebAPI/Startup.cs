@@ -45,8 +45,17 @@ namespace WebAPI
             }
 
             app.UseHttpsRedirection();
-
+            
+            // CORS permissions:
+            
             app.UseRouting();
+            
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod()); // allow credetials
+
+            app.UseCors(options => options.AllowAnyOrigin());
 
             app.UseAuthorization();
 
